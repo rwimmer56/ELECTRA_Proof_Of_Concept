@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<h1 style="margin-top: 2cm;" align="center">Context</h1>
+<form method="POST">
+    <textarea name="context" id="context" class="form-control" rows="8" ></textarea>
+    <br />
+    <div align="center">
+    </div>
+
+<h1 style="margin-top: 2cm" align="center">Questions</h1>
+
+    <textarea name="question" id="question" class="form-control" rows="5"></textarea>
+    <br />
+    <div align="center">
+    <button type="submit" class="btn btn-primary">Predict Answers</button>
+    </div>
+</form>
+{% endblock %}
