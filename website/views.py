@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request
 from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline
 from jinja2 import Template
+import pandas as pd
 
 
 model_name = "deepset/electra-base-squad2"
