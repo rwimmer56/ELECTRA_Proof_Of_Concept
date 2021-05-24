@@ -25,9 +25,15 @@ def home():
             }
             res = nlp(QA_input)
             answers.append(res)
-        print(answers)
-    return render_template("home.html")
 
-@views.route('/results', methods=['GET', 'POST'])
-def results():
-    return render_template("results.html")
+        for answer in answers:
+            if answer['score'] < 0.1:
+                answer.update(answer = "No Answer")
+    
+        predictions = [list(answer.values())[3] for answer in answers]
+        leng = len(question_list)
+
+        return render_template("results.html", context=context, leng=leng, predictions=predictions, question_list=question_list)
+
+    else:
+        return render_template("home.html")
