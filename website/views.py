@@ -27,7 +27,7 @@ def home():
             answers.append(res)
 
         for answer in answers:
-            if answer['score'] < 0.1:
+            if answer['score'] < 0.01:
                 answer.update(answer = "No Answer")
     
         predictions = [list(answer.values())[3] for answer in answers]
