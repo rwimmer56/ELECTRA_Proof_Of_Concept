@@ -24,4 +24,4 @@ pip install -r requirements.txt
 
 ### 4. Executing program
 
-* Run the main.py file and the program will run on your machine.
+* Run the main.py file and the program will load on your machine.
